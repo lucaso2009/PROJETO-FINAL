@@ -1,0 +1,14 @@
+REVISÃO FEITA
+
+- Pastas organizadas e arquivos duplicados com "(2)" removidos.
+- node_modules removido do ZIP para evitar conflito de dependências.
+- package.json ajustado para Express 4 estável.
+- Cadastro e login revisados.
+- Rotas /api/users, /api/login e /api/products revisadas.
+- Painel admin refeito com botão "Ver site" para conferir o index.
+- Edição de produto agora preenche o formulário e salva com PUT /api/products/:id.
+- Exclusão de produto revisada.
+- Carrinho refeito para usar localStorage e botões funcionando.
+- CSS refeito com visual mais chamativo para site de promoções, sem neon.
+- Responsividade melhorada para celular.
+- Nenhuma alteração obrigatória no banco de dados.

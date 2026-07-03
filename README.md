@@ -69,3 +69,14 @@ Se quiser, eu posso:
 - Ou criar endpoints adicionais para CRUD de produtos no admin.
 
 Qual das duas opções prefere agora? (PowerShell import / CRUD endpoints)
+
+## Correção importante para XAMPP/Apache
+Se você abrir o site por `http://localhost:8080`, deixe o servidor Node rodando também em `http://localhost:3000`.
+As telas agora enviam cadastro, login e produtos para `http://localhost:3000/api/...` automaticamente quando o site está aberto na porta 8080.
+
+Passos:
+1. Abra o XAMPP e ligue MySQL, se for usar banco.
+2. No terminal, entre na pasta do projeto.
+3. Rode `npm install`.
+4. Rode `npm start`.
+5. Acesse preferencialmente `http://localhost:3000/cadastro.html` ou, se usar XAMPP, `http://localhost:8080/ProjetoOrlando/cadastro.html` com o Node aberto.

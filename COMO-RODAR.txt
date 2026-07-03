@@ -1,0 +1,25 @@
+COMO RODAR O PROJETO PROMOFINDER
+
+1) Extraia o ZIP em uma pasta limpa. Não misture com pastas antigas.
+
+2) No Git Bash/CMD, entre na pasta do projeto:
+   cd ProjetoOrlando_ORGANIZADO_CORRIGIDO
+
+3) Instale as dependências novamente:
+   npm install
+
+4) Inicie o servidor:
+   npm start
+
+5) Abra no navegador:
+   http://localhost:3000/index.html
+
+Admin:
+   http://localhost:3000/adm_login.html
+   E-mail: admin@promofinder.local
+   Senha: admin123
+
+IMPORTANTE:
+- Não copie node_modules antigo para dentro do projeto.
+- Se der erro em node_modules, apague node_modules e package-lock.json e rode npm install de novo.
+- Este pacote não altera a estrutura do banco de dados. Ele usa as tabelas existentes users/products ou usuarios/produtos, se existirem.

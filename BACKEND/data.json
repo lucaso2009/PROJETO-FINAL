@@ -1,22 +1,231 @@
 {
   "products": [
-    {"id":1,"title":"Notebook Gamer Acer Nitro V15","price":"4299.90","oldPrice":"5499.90","image":"https://picsum.photos/seed/p1/600/400","brand":"Acer","description":"Notebook gamer com processador Intel i7 de 10ª geração, 16GB RAM, SSD 512GB e GPU dedicada para jogos e edição de vídeo.","specs":["CPU: Intel i7-10750H","RAM: 16GB DDR4","SSD: 512GB NVMe","GPU: NVIDIA GTX 1660 Ti","Tela: 15.6\" FHD 144Hz"]},
-    {"id":2,"title":"Headset Gamer HyperX Cloud","price":"249.90","oldPrice":"349.90","image":"https://picsum.photos/seed/p2/600/400","brand":"HyperX","description":"Headset com drivers de 53mm, almofadas confortáveis e microfone com cancelamento de ruído, ideal para longas sessões de jogo.","specs":["Drivers: 53mm","Conector: 3.5mm","Microfone: cancelamento de ruído","Peso: 300g"]},
-    {"id":3,"title":"Teclado Mecânico Redragon","price":"349.90","oldPrice":"449.90","image":"https://picsum.photos/seed/p3/600/400","brand":"Redragon","description":"Teclado mecânico compacto com switches Outemu, retroiluminação RGB e construção em alumínio resistente.","specs":["Switches: Outemu Red/Blue","Layout: Tenkeyless/Full","RGB: endereçável","Conexão: USB-C"]},
-    {"id":4,"title":"Mouse Gamer Logitech G502","price":"299.90","oldPrice":"399.90","image":"https://picsum.photos/seed/p4/600/400","brand":"Logitech","description":"Mouse com sensor avançado, 11 botões programáveis e ajuste de peso para máxima precisão em jogos.","specs":["Sensor: HERO 25K","DPI: até 25600","Botões: 11 programáveis","Peso ajustável"]},
-    {"id":5,"title":"Monitor 27'' 144Hz","price":"1599.90","oldPrice":"1999.90","image":"https://picsum.photos/seed/p5/600/400","brand":"Samsung","description":"Monitor 27\" com painel IPS, taxa de atualização de 144Hz e tempo de resposta rápido, ideal para gamers competitivos.","specs":["Tamanho: 27\"","Resolução: 1920x1080","Painel: IPS","Refresh: 144Hz"]},
-    {"id":6,"title":"SSD NVMe 1TB","price":"429.90","oldPrice":"599.90","image":"https://picsum.photos/seed/p6/600/400","brand":"Kingston","description":"SSD NVMe de 1TB com altas taxas de leitura e escrita, reduz tempo de carregamento de jogos e do sistema operacional.","specs":["Capacidade: 1TB","Interface: NVMe PCIe 3.0","Leitura seq.: 3500 MB/s","Gravação seq.: 3000 MB/s"]},
-    {"id":7,"title":"Placa de Vídeo RTX 4060","price":"2299.90","oldPrice":"2799.90","image":"https://picsum.photos/seed/p7/600/400","brand":"NVIDIA","description":"GPU para jogos em 1080p/1440p com suporte a ray tracing e DLSS para melhor desempenho e qualidade visual.","specs":["GPU: NVIDIA RTX 4060","VRAM: 8GB GDDR6","Ray Tracing: Sim","Conectores: HDMI, DisplayPort"]},
-    {"id":8,"title":"Fonte 650W 80+ Gold","price":"349.90","oldPrice":"429.90","image":"https://picsum.photos/seed/p8/600/400","brand":"Corsair","description":"Fonte 650W certificada 80 Plus Gold com cabeamento modular e proteção completa para seu PC.","specs":["Potência: 650W","Eficiência: 80+ Gold","Modular: Parcial/Full (varia)","Proteções: OVP, OCP, SCP"]},
-    {"id":9,"title":"Cadeira Gamer Pro","price":"899.90","oldPrice":"1199.90","image":"https://picsum.photos/seed/p9/600/400","brand":"DXRacer","description":"Cadeira ergonômica com suporte lombar ajustável, reclinação e materiais premium para conforto prolongado.","specs":["Reclinação: até 150°","Suporte lombar: ajustável","Material: PU couro premium","Capacidade: 150kg"]},
-    {"id":10,"title":"Webcam Full HD","price":"199.90","oldPrice":"249.90","image":"https://picsum.photos/seed/p10/600/400","brand":"Logitech","description":"Webcam Full HD 1080p com autofoco e microfone embutido, ideal para streaming e videochamadas.","specs":["Resolução: 1080p@30fps","Autofoco: Sim","Microfone: Stereo embutido","Conexão: USB-A/USB-C"]},
-    {"id":11,"title":"Microfone Condensador USB","price":"349.90","oldPrice":"449.90","image":"https://picsum.photos/seed/p11/600/400","brand":"Blue","description":"Microfone condensador USB para gravação e streaming com alta captação e controle de ganho.","specs":["Tipo: Condensador USB","Padrão polar: cardioide","Conexão: USB","Controle: ganho integrado"]},
-    {"id":12,"title":"Hub USB-C 7 portas","price":"129.90","oldPrice":"169.90","image":"https://picsum.photos/seed/p12/600/400","brand":"Anker","description":"Hub compacto com múltiplas portas USB, HDMI e leitor de cartão, ideal para notebooks modernos.","specs":["Portas: 3xUSB-A, 2xUSB-C, HDMI, Leitor SD","Resolução HDMI: até 4K@30Hz","Alimentação: pass-through"]},
-    {"id":13,"title":"Gabinete RGB","price":"299.90","oldPrice":"399.90","image":"https://picsum.photos/seed/p13/600/400","brand":"Cooler Master","description":"Gabinete ATX com fluxo de ar otimizado, vidro temperado e iluminação RGB pré-instalada.","specs":["Formato: Mid-Tower ATX","Painel: vidro temperado","Suporte GPU: até 330mm","Fans: 3x RGB inclusas"]},
-    {"id":14,"title":"Memória RAM 32GB DDR5","price":"799.90","oldPrice":"999.90","image":"https://picsum.photos/seed/p14/600/400","brand":"Corsair","description":"Kit 2x16GB DDR5 de alta frequência para tarefas intensivas e gaming com baixa latência.","specs":["Capacidade: 32GB (2x16GB)","Tipo: DDR5","Frequência: 5200MHz","CAS: CL38"]},
-    {"id":15,"title":"Kit Refrigeração Líquida","price":"499.90","oldPrice":"649.90","image":"https://picsum.photos/seed/p15/600/400","brand":"NZXT","description":"Kit AIO com radiador de 240mm, ventoinhas silenciosas e compatibilidade com sockets modernos.","specs":["Radiador: 240mm","Compatibilidade: Intel/AMD","Fans: 2x120mm","RGB: Sim"]}
+    {
+      "id": 1,
+      "title": "Notebook Gamer Acer Nitro V15",
+      "brand": "Acer",
+      "price": 4299.9,
+      "oldPrice": 5499.9,
+      "image": "https://picsum.photos/seed/p1/600/400",
+      "description": "Notebook gamer com processador Intel i7 de 10ª geração, 16GB RAM, SSD 512GB e GPU dedicada para jogos e edição de vídeo.",
+      "specs": []
+    },
+    {
+      "id": 2,
+      "title": "Headset Gamer HyperX Cloud",
+      "price": "249.90",
+      "oldPrice": "349.90",
+      "image": "https://picsum.photos/seed/p2/600/400",
+      "brand": "HyperX",
+      "description": "Headset com drivers de 53mm, almofadas confortáveis e microfone com cancelamento de ruído, ideal para longas sessões de jogo.",
+      "specs": [
+        "Drivers: 53mm",
+        "Conector: 3.5mm",
+        "Microfone: cancelamento de ruído",
+        "Peso: 300g"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Teclado Mecânico Redragon",
+      "price": "349.90",
+      "oldPrice": "449.90",
+      "image": "https://picsum.photos/seed/p3/600/400",
+      "brand": "Redragon",
+      "description": "Teclado mecânico compacto com switches Outemu, retroiluminação RGB e construção em alumínio resistente.",
+      "specs": [
+        "Switches: Outemu Red/Blue",
+        "Layout: Tenkeyless/Full",
+        "RGB: endereçável",
+        "Conexão: USB-C"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Mouse Gamer Logitech G502",
+      "price": "299.90",
+      "oldPrice": "399.90",
+      "image": "https://picsum.photos/seed/p4/600/400",
+      "brand": "Logitech",
+      "description": "Mouse com sensor avançado, 11 botões programáveis e ajuste de peso para máxima precisão em jogos.",
+      "specs": [
+        "Sensor: HERO 25K",
+        "DPI: até 25600",
+        "Botões: 11 programáveis",
+        "Peso ajustável"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Monitor 27'' 144Hz",
+      "price": "1599.90",
+      "oldPrice": "1999.90",
+      "image": "https://picsum.photos/seed/p5/600/400",
+      "brand": "Samsung",
+      "description": "Monitor 27\" com painel IPS, taxa de atualização de 144Hz e tempo de resposta rápido, ideal para gamers competitivos.",
+      "specs": [
+        "Tamanho: 27\"",
+        "Resolução: 1920x1080",
+        "Painel: IPS",
+        "Refresh: 144Hz"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "SSD NVMe 1TB",
+      "price": "429.90",
+      "oldPrice": "599.90",
+      "image": "https://picsum.photos/seed/p6/600/400",
+      "brand": "Kingston",
+      "description": "SSD NVMe de 1TB com altas taxas de leitura e escrita, reduz tempo de carregamento de jogos e do sistema operacional.",
+      "specs": [
+        "Capacidade: 1TB",
+        "Interface: NVMe PCIe 3.0",
+        "Leitura seq.: 3500 MB/s",
+        "Gravação seq.: 3000 MB/s"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Placa de Vídeo RTX 4060",
+      "price": "2299.90",
+      "oldPrice": "2799.90",
+      "image": "https://picsum.photos/seed/p7/600/400",
+      "brand": "NVIDIA",
+      "description": "GPU para jogos em 1080p/1440p com suporte a ray tracing e DLSS para melhor desempenho e qualidade visual.",
+      "specs": [
+        "GPU: NVIDIA RTX 4060",
+        "VRAM: 8GB GDDR6",
+        "Ray Tracing: Sim",
+        "Conectores: HDMI, DisplayPort"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Fonte 650W 80+ Gold",
+      "price": "349.90",
+      "oldPrice": "429.90",
+      "image": "https://picsum.photos/seed/p8/600/400",
+      "brand": "Corsair",
+      "description": "Fonte 650W certificada 80 Plus Gold com cabeamento modular e proteção completa para seu PC.",
+      "specs": [
+        "Potência: 650W",
+        "Eficiência: 80+ Gold",
+        "Modular: Parcial/Full (varia)",
+        "Proteções: OVP, OCP, SCP"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Cadeira Gamer Pro",
+      "price": "899.90",
+      "oldPrice": "1199.90",
+      "image": "https://picsum.photos/seed/p9/600/400",
+      "brand": "DXRacer",
+      "description": "Cadeira ergonômica com suporte lombar ajustável, reclinação e materiais premium para conforto prolongado.",
+      "specs": [
+        "Reclinação: até 150°",
+        "Suporte lombar: ajustável",
+        "Material: PU couro premium",
+        "Capacidade: 150kg"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Webcam Full HD",
+      "price": "199.90",
+      "oldPrice": "249.90",
+      "image": "https://picsum.photos/seed/p10/600/400",
+      "brand": "Logitech",
+      "description": "Webcam Full HD 1080p com autofoco e microfone embutido, ideal para streaming e videochamadas.",
+      "specs": [
+        "Resolução: 1080p@30fps",
+        "Autofoco: Sim",
+        "Microfone: Stereo embutido",
+        "Conexão: USB-A/USB-C"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Microfone Condensador USB",
+      "price": "349.90",
+      "oldPrice": "449.90",
+      "image": "https://picsum.photos/seed/p11/600/400",
+      "brand": "Blue",
+      "description": "Microfone condensador USB para gravação e streaming com alta captação e controle de ganho.",
+      "specs": [
+        "Tipo: Condensador USB",
+        "Padrão polar: cardioide",
+        "Conexão: USB",
+        "Controle: ganho integrado"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Hub USB-C 7 portas",
+      "price": "129.90",
+      "oldPrice": "169.90",
+      "image": "https://picsum.photos/seed/p12/600/400",
+      "brand": "Anker",
+      "description": "Hub compacto com múltiplas portas USB, HDMI e leitor de cartão, ideal para notebooks modernos.",
+      "specs": [
+        "Portas: 3xUSB-A, 2xUSB-C, HDMI, Leitor SD",
+        "Resolução HDMI: até 4K@30Hz",
+        "Alimentação: pass-through"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Gabinete RGB",
+      "price": "299.90",
+      "oldPrice": "399.90",
+      "image": "https://picsum.photos/seed/p13/600/400",
+      "brand": "Cooler Master",
+      "description": "Gabinete ATX com fluxo de ar otimizado, vidro temperado e iluminação RGB pré-instalada.",
+      "specs": [
+        "Formato: Mid-Tower ATX",
+        "Painel: vidro temperado",
+        "Suporte GPU: até 330mm",
+        "Fans: 3x RGB inclusas"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Memória RAM 32GB DDR5",
+      "price": "799.90",
+      "oldPrice": "999.90",
+      "image": "https://picsum.photos/seed/p14/600/400",
+      "brand": "Corsair",
+      "description": "Kit 2x16GB DDR5 de alta frequência para tarefas intensivas e gaming com baixa latência.",
+      "specs": [
+        "Capacidade: 32GB (2x16GB)",
+        "Tipo: DDR5",
+        "Frequência: 5200MHz",
+        "CAS: CL38"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Kit Refrigeração Líquida",
+      "price": "499.90",
+      "oldPrice": "649.90",
+      "image": "https://picsum.photos/seed/p15/600/400",
+      "brand": "NZXT",
+      "description": "Kit AIO com radiador de 240mm, ventoinhas silenciosas e compatibilidade com sockets modernos.",
+      "specs": [
+        "Radiador: 240mm",
+        "Compatibilidade: Intel/AMD",
+        "Fans: 2x120mm",
+        "RGB: Sim"
+      ]
+    }
   ],
   "users": [
-    {"id":1,"name":"Admin","email":"admin@promofinder.local"}
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@promofinder.local",
+      "senha": "admin123"
+    }
   ]
 }

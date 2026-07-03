@@ -1,57 +1,6 @@
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PromoFinder - Produtos</title>
-	<link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-	<header>
-
-		<div class="logo">PromoFinder</div>
-
-		<nav>
-			<a href="index.html">Início</a>
-			<a href="perfil.html">Minha Conta</a>
-			<a href="#" id="logoutLink">Sair</a>
-		</nav>
-
-	</header>
-
-	<div class="container">
-
-		<h1>Produtos em Destaque</h1>
-
-		<div class="grid-produtos">
-			<div class="card-prod">
-				<img src="https://picsum.photos/300/200?random=1" alt="Produto">
-				<h3>Fone Gamer</h3>
-				<p class="preco">R$ 199,90</p>
-				<a href="index.html">Ver produto</a>
-			</div>
-			<div class="card-prod">
-				<img src="https://picsum.photos/300/200?random=2" alt="Produto">
-				<h3>Teclado Mecânico</h3>
-				<p class="preco">R$ 349,90</p>
-				<a href="index.html">Ver produto</a>
-			</div>
-			<div class="card-prod">
-				<img src="https://picsum.photos/300/200?random=3" alt="Produto">
-				<h3>Mouse Gamer</h3>
-				<p class="preco">R$ 129,90</p>
-				<a href="index.html">Ver produto</a>
-			</div>
-		</div>
-
-	</div>
-
-	<script src="js/login.js"></script>
-
-</body>
-
-</html>
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>PromoFinder - Produtos</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header><div class="logo">PromoFinder</div><nav><a href="index.html">Início</a><a class="active" href="produto.html">Produtos</a><a href="perfil.html">Minha Conta</a><a href="carrinho.html">Carrinho</a><a href="#" id="logoutLink">Entrar</a></nav></header>
+<main class="container"><div class="toolbar"><h1>Todos os produtos</h1><input id="searchInput" class="search" placeholder="Buscar produto..."></div><div id="productGrid" class="grid-produtos"></div></main>
+<div id="overlay" class="overlay"></div><div id="loginModal" class="modal"><div class="modal-card"><h2>Entrar</h2><form id="loginForm" class="modal-form"><input type="email" id="email" placeholder="E-mail" required><input type="password" id="senha" placeholder="Senha" required><button type="submit">Entrar</button></form><p>Não possui conta? <a href="cadastro.html">Cadastrar</a></p></div></div>
+<div id="infoOverlay" class="overlay"></div><div id="infoModal" class="modal"><div class="modal-card"><h2 id="infoTitle">Detalhes</h2><div id="infoContent"></div><button id="infoClose" class="btn-secondary" style="margin-top:12px">Fechar</button></div></div>
+<script src="js/api.js"></script><script src="js/produtos.js"></script><script src="js/login.js"></script></body></html>

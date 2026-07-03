@@ -1,0 +1,25 @@
+CREATE DATABASE IF NOT EXISTS promofinder CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE promofinder;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  email VARCHAR(180) NOT NULL UNIQUE,
+  senha VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS products (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  brand VARCHAR(120) DEFAULT '',
+  price DECIMAL(10,2) NOT NULL DEFAULT 0,
+  oldPrice DECIMAL(10,2) NULL,
+  image TEXT,
+  description TEXT,
+  specs JSON NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT IGNORE INTO users (id, name, email, senha) VALUES
+(1, 'Administrador', 'admin@promofinder.local', 'admin123');

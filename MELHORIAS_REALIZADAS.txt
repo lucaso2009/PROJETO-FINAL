@@ -1,0 +1,36 @@
+MELHORIAS REALIZADAS - SEM ALTERAR ESTRUTURA DO BANCO
+
+1. Visual/CSS
+- Novo layout mais chamativo para site de promoções, sem neon.
+- Paleta clara com tons de laranja/marrom, cards arredondados e sombras suaves.
+- Melhor responsividade em celular, tablet e desktop.
+- Tabelas administrativas com rolagem horizontal no mobile.
+
+2. Botões e funcionalidades
+- Botões Comprar, Adicionar e Ver detalhes funcionando nos cards de produtos.
+- Carrinho agora carrega os itens adicionados pelo usuário via localStorage.
+- Remover item, alterar quantidade, ver pedido e finalizar compra funcionando.
+- Finalizar compra limpa o carrinho após confirmação.
+
+3. Administração
+- Botão “Ver site” no menu do administrador para abrir o index e conferir os produtos salvos.
+- Botão “Ver no site” em cada produto da lista.
+- Botões Editar, Excluir, Limpar, Cancelar edição e Atualizar lista revisados.
+- Formulário de produto melhorado com descrição e especificações.
+- Salvamento de edição mantém compatibilidade com o backend já existente.
+
+4. Páginas ajustadas
+- index.html
+- produto.html
+- carrinho.html
+- ADM/produtos.html
+- ADM/dashboard.html, ADM/usuarios.html e ADM/relatorios.html receberam botão Ver site.
+- css/style.css e css/admin.css refeitos/melhorados.
+- js/produtos.js e js/carrinho.js corrigidos.
+
+Como rodar:
+1. Extraia o ZIP.
+2. Entre na pasta do projeto.
+3. Rode: npm install
+4. Rode: npm start
+5. Abra: http://localhost:3000/index.html

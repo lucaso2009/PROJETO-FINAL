@@ -1,130 +1,15 @@
-// Gera comportamento do modal de login e compatibilidade com página standalone
-const overlay = document.getElementById("overlay");
-const loginModal = document.getElementById("loginModal");
-const cadastroModal = document.getElementById("cadastroModal");
-const loginForm = document.getElementById("loginForm");
-const logoutLink = document.getElementById("logoutLink");
-const abrirCadastroLink = document.getElementById("abrirCadastro");
-const voltarLoginLink = document.getElementById("voltarLogin");
-
-function _showOverlay(){ if (overlay) overlay.classList.add('show'); }
-function _hideOverlay(){ if (overlay) overlay.classList.remove('show'); }
-
-function _showModal(modalEl){
-    if (!modalEl) return;
-    modalEl.classList.add('show');
-    // allow CSS transitions to pick up
-    setTimeout(() => modalEl.classList.add('visible'), 10);
-}
-
-function _hideModal(modalEl){
-    if (!modalEl) return;
-    modalEl.classList.remove('visible');
-    modalEl.classList.remove('show');
-}
-
-function openLogin() {
-    _showOverlay();
-    _showModal(loginModal);
-}
-
-function closeLogin() {
-    _hideOverlay();
-    _hideModal(loginModal);
-}
-
-function openCadastro(){
-    _showOverlay();
-    _hideModal(loginModal);
-    _showModal(cadastroModal);
-}
-
-function closeCadastro(){
-    _hideModal(cadastroModal);
-    _hideOverlay();
-}
-
-function updateNav() {
-    const logged = !!localStorage.getItem("usuario");
-    if (logoutLink) {
-        if (logged) {
-            logoutLink.textContent = "Sair";
-        } else {
-            logoutLink.textContent = "Entrar";
-        }
-    }
-}
-
-if (loginForm) {
-    loginForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        // autenticação básica (demo)
-        localStorage.setItem("usuario", "logado");
-        const emailInput = document.getElementById('email');
-        const emailVal = emailInput ? (emailInput.value || '').trim() : '';
-        if (emailVal) localStorage.setItem('usuario_email', emailVal);
-        closeLogin();
-        updateNav();
-        // se estiver em página standalone, redireciona para index
-        if (location.pathname.endsWith("/login.html") || location.pathname.endsWith("\\login.html")) {
-            location.href = "index.html";
-        }
-    });
-}
-
-if (logoutLink) {
-    logoutLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        // se usuário estiver logado, faz logout, senão abre modal
-        if (localStorage.getItem("usuario")) {
-            localStorage.removeItem("usuario");
-            updateNav();
-            openLogin();
-        } else {
-            openLogin();
-        }
-    });
-}
-
-if (abrirCadastroLink) {
-    abrirCadastroLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        openCadastro();
-    });
-}
-
-if (voltarLoginLink) {
-    voltarLoginLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        _hideModal(cadastroModal);
-        _showModal(loginModal);
-    });
-}
-
-// on load: se não logado, abrir modal (quando estiver na pagina principal)
-window.addEventListener("load", () => {
-    updateNav();
-    const usuario = localStorage.getItem("usuario");
-    // se estiver no index e nao logado, obrigar login
-    const path = location.pathname.toLowerCase();
-    if (!usuario && (path.endsWith("/index.html") || path.endsWith("/") || path.endsWith("\\index.html"))) {
-        openLogin();
-    }
+(function(){
+const API_BASE = window.API_BASE || ((['8080','80','5500','5173'].includes(location.port)) ? 'http://localhost:3000' : '');
+function qs(id){return document.getElementById(id)}
+function show(el){el?.classList.add('show')} function hide(el){el?.classList.remove('show')}
+function updateNav(){ const l=qs('logoutLink'); if(l) l.textContent=localStorage.getItem('usuario')?'Sair':'Entrar'; }
+function openLogin(){show(qs('overlay'));show(qs('loginModal'))} function closeLogin(){hide(qs('overlay'));hide(qs('loginModal'))} function openCadastro(){show(qs('overlay'));hide(qs('loginModal'));show(qs('cadastroModal'))} function closeCadastro(){hide(qs('cadastroModal'));hide(qs('overlay'))}
+document.addEventListener('DOMContentLoaded',()=>{
+ updateNav();
+ const form=qs('loginForm');
+ form?.addEventListener('submit',async e=>{ e.preventDefault(); const email=(qs('email')?.value||'').trim().toLowerCase(); const senha=qs('senha')?.value||''; if(!email||!senha){alert('Informe e-mail e senha.');return} try{ const res=await fetch(API_BASE+'/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,senha})}); const data=await res.json().catch(()=>({})); if(!res.ok){alert(data.error||'E-mail ou senha incorretos.');return} const tipo=data.user?.tipo==='admin'||email==='admin@promofinder.local'?'admin':'logado'; localStorage.setItem('usuario',tipo); localStorage.setItem('usuario_email',email); closeLogin(); updateNav(); if(tipo==='admin') location.href='ADM/dashboard.html'; else if(location.pathname.endsWith('/login.html')) location.href='index.html'; }catch(err){ console.error(err); alert('Erro ao entrar. Confira o servidor em http://localhost:3000'); } });
+ qs('logoutLink')?.addEventListener('click',e=>{ e.preventDefault(); if(localStorage.getItem('usuario')){ localStorage.removeItem('usuario'); localStorage.removeItem('usuario_email'); updateNav(); alert('Você saiu da conta.'); } else openLogin(); });
+ qs('abrirCadastro')?.addEventListener('click',e=>{e.preventDefault();openCadastro()}); qs('voltarLogin')?.addEventListener('click',e=>{e.preventDefault();hide(qs('cadastroModal'));show(qs('loginModal'))}); qs('overlay')?.addEventListener('click',()=>{hide(qs('loginModal'));hide(qs('cadastroModal'));hide(qs('overlay'))});
 });
-
-// Fechar modal ao clicar no overlay somente se usuário já estiver logado
-if (overlay) {
-    overlay.addEventListener('click', () => {
-        const usuario = !!localStorage.getItem('usuario');
-        if (!usuario) return; // não fecha quando não logado (forçar login)
-        _hideModal(loginModal);
-        _hideModal(cadastroModal);
-        _hideOverlay();
-    });
-}
-
-// disponibiliza funções para outros scripts (cadastro.js)
-window.closeCadastro = closeCadastro;
-window.openLogin = openLogin;
-window.closeLogin = closeLogin;
-window.updateNav = updateNav;
+window.openLogin=openLogin; window.closeLogin=closeLogin; window.closeCadastro=closeCadastro; window.updateNav=updateNav;
+})();

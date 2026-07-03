@@ -1,0 +1,45 @@
+Correções realizadas no projeto PromoFinder
+
+1. Cadastro de usuários
+- Corrigido o erro de JavaScript no arquivo js/cadastro.js: havia um return fora de função, o que impedia o script de carregar.
+- Cadastro agora envia os dados corretamente para POST /api/users.
+- Mensagens de erro foram melhoradas.
+
+2. Login de usuários
+- Criada rota POST /api/login no backend.
+- Login agora valida e-mail e senha diretamente no backend.
+- Mantido fallback local apenas para caso o servidor esteja desligado.
+
+3. Banco de dados
+- BACKEND/db.js agora funciona com os dois padrões de tabela encontrados no projeto:
+  a) users / products, como está no promofinder.sql;
+  b) usuarios / produtos, como o backend antigo tentava usar.
+- Caso o MySQL não esteja aberto, o sistema usa BACKEND/data.json como fallback.
+- Corrigida compatibilidade do JSON: antes o arquivo tinha products/users, mas parte do código procurava produtos/usuarios.
+
+4. Produtos no painel ADM
+- O botão Editar agora preenche o formulário.
+- Ao salvar durante edição, o sistema usa PUT /api/products/:id.
+- Ao criar produto novo, continua usando POST /api/products.
+- Botão Cancelar edição adicionado.
+- Exclusão de produto mantida e melhorada.
+
+5. Servidor
+- O arquivo server.js da raiz agora inicia o backend correto: BACKEND/server.js.
+- Pode iniciar com:
+  npm start
+  ou
+  node server.js
+
+Como rodar
+1. Abra a pasta ProjetoOrlando no VS Code.
+2. No terminal, execute:
+   npm install
+   npm start
+3. Abra no navegador:
+   http://localhost:3000
+
+Observação
+- Se for usar MySQL, confira o arquivo BACKEND/.env.
+- O banco padrão esperado é promofinder.
+- Se o MySQL estiver fechado, o sistema ainda funciona usando BACKEND/data.json.

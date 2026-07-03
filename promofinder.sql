@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(150) NOT NULL,
   email VARCHAR(200) NOT NULL UNIQUE,
+  senha VARCHAR(255) NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -40,4 +41,4 @@ INSERT INTO products (title, brand, price, oldPrice, image, description, specs) 
 ('Memória RAM 32GB DDR5','Corsair',799.90,999.90,'https://picsum.photos/seed/p14/600/400','Kit 2x16GB DDR5 de alta frequência para tarefas intensivas e gaming.', JSON_ARRAY('Capacidade: 32GB (2x16GB)','Tipo: DDR5','Frequência: 5200MHz','CAS: CL38')),
 ('Kit Refrigeração Líquida','NZXT',499.90,649.90,'https://picsum.photos/seed/p15/600/400','Kit AIO com radiador de 240mm, ventoinhas silenciosas e compatibilidade com sockets modernos.', JSON_ARRAY('Radiador: 240mm','Compatibilidade: Intel/AMD','Fans: 2x120mm','RGB: Sim'));
 
-INSERT INTO users (name, email) VALUES ('Admin','admin@promofinder.local');
+INSERT INTO users (name, email, senha) VALUES ('Admin','admin@promofinder.local','admin123');
